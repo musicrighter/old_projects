@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url('../images/my_background.jpg');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 50px;
+      color: white;
+      text-shadow: 3px 3px 2px black;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(000, 000, 000, 0.3);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      margin: 0 auto;
+      max-width: 500px;
+      padding: 20px;
+      background: rgba(000, 000, 255, 0.1);
+    }
+    body {
+      background: rgba(000, 000, 255, 0.2);
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+      }
+      li {
+        display: block;
+        padding: 5px;
+      }
+    }
+  </style>
+  <script>
+    $("button").onclick = function() {
+      alert('Thanks for the like!');
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <img src="../images/my_profile.jpg" width=200 height=200>
+    <h1>David </br> Gustafson</h1>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Best Music</a></li>
+      <li><a href="#">Worst Music</a></li>
+    </ul>
+  </header>
+  <article>
+    <h2>Family</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;
+      Everyone on both sides of my family plays music for fun and/or professionally, some even compose too.
+    </p>
+    <button>Like</button>
+  </article>
+  <article>
+    <h2>Beginning</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;
+      I started playing instruments when I was just a couple years old, and then started composing around 9.
+    </p>
+    <button>Like</button>
+  </article>
+  <article>
+    <h2>High School</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;
+      I have been in many kinds of performance groups, including Jazz band, marching band and Guitar program.
+    </p>
+    <button>Like</button>
+  </article>
+</body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  <meta charset='utf-8' >
+    <title> Ropa Sci </title>
+    <style>
+      body {
+        text-align: center;
+        background: url(http://www.psdgraphics.com/file/light-blue-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 300px;
+        padding-right: 300px;
+      }
+    </style>
+  </head>
+
+ <body>
+   <h2>Rock Paper Scissors</h2>
+   <p>
+     Choose your weapon:
+     <form>
+     <input type="radio" id='rock' name="userChoice" size="10" value='rock'>
+     <img src='http://www.gardenclassics.co.nz/img/product/rock-large-rock-large.gif'
+      height='150' width='150' id='rockImg' 
+      onclick="document.getElementById('rock').checked = true">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     <input type="radio" id='paper' name="userChoice" size="10" value='paper'>
+     <img src='http://www.bestwallpaperdesign.com/wp-content/uploads/2014/05/lined-paper-background-7.jpg'
+      height='150' width='120' id='paperImg'
+      onclick="document.getElementById('paper').checked = true">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     <input type="radio" id='scissors' name="userChoice" size="10" value='scissors'>
+     <img src='http://upload.wikimedia.org/wikipedia/commons/6/6c/Fiskars-scissors.jpg'
+      height='150' width='150' id='scissorsImg'
+      onclick="document.getElementById('scissors').checked = true">
+
+     </form>
+   </p>   
+   
+   <input id="btn1" type="button" value="Challenge Opponent">
+   <br><br>
+   
+   <hr>
+   <div id="outputDiv"></div> 
+   <script src="../js/rockPC.js" ></script>
+ </body>
+</html>

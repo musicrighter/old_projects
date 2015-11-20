@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html lang='en'> 
+<head> 
+	<meta charset='utf-8' >
+	<title> Number Puzzler</title> 
+	<link href="../css/game.css" rel="stylesheet" type="text/css" />
+
+	<script>
+	function attacks(name, amt, who, full){
+		var Name = document.getElementById(name);
+		var Who = document.getElementById(who);
+		var oHealth = document.getElementById('oHealth').value;
+		var output = document.getElementById('outDiv');
+		var capitalize = name.charAt(0).toUpperCase() + name.slice(1);
+		var next = false;
+
+		/*document.addEventListener('keydown', function (evt) {
+			if (evt.keyCode === 81) {
+				next = true;
+			}
+		})*/
+
+		if (Name.value != 0){
+			Name.value -= 1; 
+			Name.innerHTML = capitalize + '<br>' + Name.value + '/' + full;
+			if (name != 'heal' & name != 'growl'){
+				Who.value -= amt; 
+				output.innerHTML = 'You used ' + capitalize + ' for ' + amt + ' damage';
+			}
+			else if (name == 'growl'){
+				output.innerHTML = 'You used ' + capitalize + ' and boosted attack';
+			}
+			else {
+				Who.value += amt; 
+				output.innerHTML = 'You used ' + capitalize + ' and gained ' + amt + ' health';
+			}
+		}
+		else {alert('Out of PP, choose a different attack')
+		}
+		document.getElementById('tackle').disabled = true
+		document.getElementById('bite').disabled = true
+		document.getElementById('growl').disabled = true
+		document.getElementById('heal').disabled = true
+
+		document.addEventListener('keyup', function (evt) {
+			if (evt.keyCode === 81) {
+				next = true;
+			}
+		})
+
+		if (name == 'heal' || name == 'growl'){
+			amt = 0
+		}
+		if ((oHealth -= amt) <= 0){
+			alert('You win!')
+		}
+		else if (next == true){
+			next = false
+			oAttack()
+		}
+	}
+
+	function oAttack () {
+		var pHealth = document.getElementById('pHealth');
+		var output2 = document.getElementById('outDiv');
+		var damage = Math.floor(Math.random()*(20-10+1)) + 10;
+
+		pHealth.value -= damage;
+		output2.innerHTML = 'Opponent did ' + damage + ' damage';
+		document.getElementById('healthNum').innerHTML = pHealth.value + '/100';
+
+		document.getElementById('tackle').disabled = false
+		document.getElementById('bite').disabled = false
+		document.getElementById('growl').disabled = false
+		document.getElementById('heal').disabled = false
+
+		if (pHealth.value <= 0){
+			alert('You lose!')
+		}
+	}
+	</script>
+
+</head> 
+<body> 
+	<progress id="oHealth" value="100" max="100">
+		<div pseudo='-webkit-progress-inner-element'>
+			<div pseudo='-webkit-progress-bar'>
+				<div pseudo='-webkit-progress-value'></div>
+			</div>
+		</div>
+	</progress>Opponent
+
+	<br><br><br><br>
+
+	<progress id="pHealth" value="100" max="100">
+		<div pseudo='-webkit-progress-inner-element'>
+			<div pseudo='-webkit-progress-bar'>
+				<div pseudo='-webkit-progress-value'></div>
+			</div>
+		</div>
+	</progress>
+	<div id='healthNum'>100/100</div>
+<!-- 	<button id='oppo' onclick='oAttack()'>Opponent's turn</button> -->
+
+	<div id='attacks'>
+
+		<div id='top'>	
+			<button id="tackle" value='15' onclick="attacks('tackle', 10, 'oHealth', 15)">&nbsp;Tackle <br> 15/15</button>
+
+			<button id="bite" value='10' onclick="attacks('bite', 15, 'oHealth', 10)">&nbsp;Bite <br> 10/10</button>
+		</div>
+
+		<div id='bottom'>
+			<button id="growl" value='20' onclick="attacks('growl', 0, 'oHealth', 20)">&nbsp;Growl <br> 20/20</button>
+
+			<button id="heal" value='2' onclick="attacks('heal', 30, 'pHealth', 2)">&nbsp;Heal <br> 2/2</button>
+		</div>
+	
+	</div> <br>
+
+	<div id="outDiv"></div>
+</body>
+</html>
+
+
+
+
+	<!-- 	<button id="tackle" style="font-size:14pt;" value='15' 
+			onclick="document.getElementById('health').value -= 10; document.getElementById('tackle').value -= 1; 
+			document.getElementById('tackleDiv').innerHTML = document.getElementById('tackle').value">Tackle 
+			<div id='tWrap'><div id='rtDiv'>/15&nbsp;</div><div id='tackleDiv'>15</div></div></button> 
+		<button id="bite" style="font-size:14pt;" value='10' 
+			onclick="document.getElementById('health').value -= 15; document.getElementById('bite').value -= 1; 
+			document.getElementById('biteDiv').innerHTML = document.getElementById('bite').value;">Bite
+			<div id='bWrap'><div id='rbDiv'>/10&nbsp;</div><div id='biteDiv'>10</div></div></button> 
+		<button id="growl" style="font-size:14pt;" value='20' 
+				onclick="document.getElementById('health').value -= 0; document.getElementById('growl').value -= 1; 
+				document.getElementById('growlDiv').innerHTML = document.getElementById('growl').value;">Growl
+				<div id='gWrap'><div id='rgDiv'>/20&nbsp;</div><div id='growlDiv'>20</div></div></button>
+
+		<button id="heal" style="font-size:14pt;" value='2' 
+				onclick="document.getElementById('health').value += 20; document.getElementById('heal').value -= 1; 
+				document.getElementById('healDiv').innerHTML = document.getElementById('heal').value;">Heal
+				<div id='hWrap'><div id='rhDiv'>/2&nbsp;&nbsp;&nbsp;</div><div id='healDiv'>2</div></div></button> -->

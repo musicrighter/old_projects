@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- lucky1.html                                     Dave Reed -->
+<!-- Web page that generates a lucky number from a range.      -->
+<!-- ========================================================= -->
+
+<html>
+ <head>
+   <title> Lucky Number </title>
+ </head>
+
+ <body>
+   <h2>Lucky Number</h2>
+   <p>
+     Numbers are selected between <input type="text" id="minBox" size=3 value=0> 
+     and <input type="text" id="maxBox" size=3 value=9>.
+   </p>
+   <input type="button" value="Generate Lucky Number" 
+          onclick="var minVal = parseFloat(document.getElementById('minBox').value);
+                   var maxVal = parseFloat(document.getElementById('maxBox').value);
+                   var number = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
+                   document.getElementById('outputDiv').innerHTML=
+                     'Your lucky number is ' + number;">  
+   <hr>
+   <div id="outputDiv"></div>
+ </body>
+</html>

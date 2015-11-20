@@ -1,0 +1,11 @@
+form{
+   background:ghostwhite;
+   border: #0000CC double 2px;
+   width: 500px;
+   padding: 10px; 
+}
+div.field {
+  margin-bottom:5px;
+  text-align:right;
+}
+.style1 {font-family: "Courier New", Courier, monospace}

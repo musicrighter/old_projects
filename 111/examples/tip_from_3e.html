@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- tip.html                                  Dave Reed -->
+<!-- Web page that calculates the tip amount on a check. -->
+<!-- =================================================== -->
+
+<html>
+ <head>
+   <title> Tip Calculator </title>
+ </head>
+
+ <body>
+   <h2>Tip Calculator</h2>
+   <p>
+     Enter the check amount: $<input type="text" id="mealAmount" size=2 value="0">
+     <br>
+     Enter the percentage to tip: <input type="text" id="tipPercent" size=2 value="0">%
+     <br>
+     Enter the percentage of sales tax: <input type="text" id="taxPercent" size=2 value="0">%
+   </p>   
+   <input type="button" value="Calculate Tip" 
+          onclick="amount = parseFloat(document.getElementById('mealAmount').value);
+                   percent = parseFloat(document.getElementById('tipPercent').value);
+                   taxPercent = parseFloat(document.getElementById('taxPercent').value);
+                   tip = amount * (percent/100);
+                   tax = amount * (taxPercent/100);
+                   total = amount + tip + tax;
+                   document.getElementById('outputDiv').innerHTML=
+                       'You should tip $' + tip.toFixed(2) +
+                       '<br>The added sales tax is $' + tax.toFixed(2) +
+                       '<br>And the total cost is <b>$' + total.toFixed(2) + '</b>';">
+   <hr>
+   <div id="outputDiv"></div>
+ </body>
+</html>
+
+                   <!-- if (amount == '') {amount = 0};
+                   else {amount = amount};
+                   if (percent == '') {percent = 0};
+                   else {percent = percent};
+                   if (taxPercent == '') {taxPercent = 0};
+                   else{taxPercent = taxPercent}; -->

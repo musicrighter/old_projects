@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <style>
+      body {
+        background: url('../images/coolWater.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arimo, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        text-align: center;
+        padding-left: 300px;
+        padding-right: 300px;
+      }
+      p {
+        font-size: 20px;
+      }
+      #boxes input, #boxes textarea {
+        border:2px outset skyBlue;
+        border-radius:4px;
+        font-family: Arimo, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+      }
+      input#btn1 {
+        padding: 4px 20px;
+        background: skyBlue; 
+        border:2px outset #dad9d8;
+        font-size: 15px;
+        letter-spacing:0.05em;
+        text-transform:uppercase;
+        text-shadow: 0px 1px 10px black;
+        color: white;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        -webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+        -moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+        box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+      }
+      div {
+        font-size: 25px;
+        color: black;
+        text-shadow: 0px 0px 5px lightBlue;
+        text-align: center;
+      }
+    </style>
+  <meta charset='utf-8' >
+    <title> Water State </title>
+  </head>
+
+ <body>
+   <h2>State of water calculator in Celsius or Fahrenheit</h2>
+   <form id = 'boxes'>
+   <p>
+     Enter the temperature:
+     <input type="text" id="tempBox" size="5" >°
+     <br>
+     Enter unit of degree: 
+     <input type="text" id="unitBox" size="5" >
+   </p>  
+   </form> 
+   
+   <input id="btn1" type="button" value="Calculate state">
+   <hr>
+   <div id="outputDiv"></div> 
+   <script src="../js/waterStates.js" ></script>
+ </body>
+</html>

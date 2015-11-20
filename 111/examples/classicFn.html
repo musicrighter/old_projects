@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' >
+<title>Classic Function Demo</title>
+<script>
+function square(n){
+  	//square n
+  	n = n * n;
+	//return result
+	return n;
+}
+</script>
+</head>
+<body style='background-color:#E6E6FA'>
+<h2>Classic Function Demo</h2>
+
+<p>View the page source to see how this web app uses a Ch.9-style function, that accepts an argument and returns a value. 
+<br><br>In 111 we call this a <em>classic</em> function, as in <em>Coke Classic</em>.</p>
+
+<hr>
+Enter number to square:
+<input type="text" id="inputBox">
+<br>
+<button onclick=
+"document.getElementById('inputBox').value = 
+   square(document.getElementById('inputBox').value);">
+Square It!
+</button>
+
+</body>
+</html>

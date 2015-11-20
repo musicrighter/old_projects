@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://www.cs.uoregon.edu/Classes/12F/cis111/cis111-mh/code/Reed/ch5/double.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Doubler </title>
+<script>
+function doubleCounter(){
+	var num = document.getElementById('numberBox').value;
+	var i = parseInt(document.getElementById('divCount').innerHTML);
+	num = num * 2;
+    document.getElementById('numberBox').value = num;
+    document.getElementById('divCount').innerHTML = (i += 1);
+}
+</script>
+<style type="text/css"></style></head>
+
+<body>
+<h2>Ex. 5.19: 
+Double-it!</h2>
+<p>
+Enter a number N: 
+  <input type="text" id="numberBox" size="10">
+<br><br>
+<input type="button" value="Double!" onclick="doubleCounter();">
+<br>
+<br>
+<input type="button" value="Reset Number of Clicks" onclick="document.getElementById('divCount').innerHTML = 0;">
+</p>
+<hr>
+<h2>Number of Clicks</h2>
+<div id="divCount">0</div>
+
+</body></html>

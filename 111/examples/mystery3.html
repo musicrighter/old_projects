@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- mystery3.html                             Dave Reed -->
+<!-- This page changes an image source on button clicks. -->
+<!-- =================================================== -->
+ 
+<html>
+ <head>
+   <title>Mystery Image</title>
+ </head>
+
+ <body>
+   <div style="text-align:center">
+     <img id="mysteryImg" src="../images/help.jpg">
+     <p>
+       <input type="button" value="Show Reed"
+              onclick="document.getElementById('mysteryImg').src=
+                         '../images/reed.jpg';">
+       <input type="button" value="Please Hide Reed"
+              onclick="document.getElementById('mysteryImg').src='../images/happy.gif';
+                      alert('Thank you so much!');">  
+     </p>
+   </div>
+ </body>
+</html>
