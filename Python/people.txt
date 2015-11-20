@@ -1,0 +1,9 @@
+Joey 44 44 8300 Propa
+Mom 149 124 850 0
+Michaela 4 1 4900 Grad
+Dad 0 0 0 0
+None 0 0 0 0
+Ryan 0 0 0 roomie
+Katie 0 0 0 0
+Matti 0 0 0 davidsucks
+Becca 0 10 50000 0
